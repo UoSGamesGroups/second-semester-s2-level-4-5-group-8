@@ -8,6 +8,9 @@ public class ProjectileDragging : MonoBehaviour {
 	public LineRenderer catapultLineFront;
 	public LineRenderer catapultLineBack;
 
+	public GameObject asteroidPrefab;
+	public float front = 0.5f;
+
 	private SpringJoint2D spring;
 	private Transform catapult;
 	private Ray rayToMouse;
@@ -54,6 +57,12 @@ public class ProjectileDragging : MonoBehaviour {
 			catapultLineFront.enabled = false;
 			catapultLineBack.enabled = false;
 
+		}
+
+		//shoot
+		if (Input.GetKeyDown ("space")) {
+			Instantiate (asteroidPrefab, new Vector3 (transform.position.x + front, transform.position.y, 0), Quaternion.identity);
+		
 		}
 
 	}

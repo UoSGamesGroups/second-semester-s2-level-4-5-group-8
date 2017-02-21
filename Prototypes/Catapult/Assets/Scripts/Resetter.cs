@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Resetter : MonoBehaviour {
 
 	public Rigidbody2D projectile;
-	public float resetSpeed = 0.025f;
+	public float resetSpeed = 0.012f;
 
 	private float resetSpeedSqr;
 	private SpringJoint2D spring;
